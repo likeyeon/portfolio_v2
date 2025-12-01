@@ -1,0 +1,21 @@
+@use '../constants/breakpoints';
+
+@mixin responsive($screen) {
+  @if ($screen == 'M') {
+    @media screen and (max-width: #{breakpoints.$md-breakpoint - 1px}) {
+      @content;
+    }
+  }
+
+  @if ($screen == 'T') {
+    @media screen and (max-width: #{breakpoints.$md-breakpoint - 1px}) {
+      @content;
+    }
+  }
+
+  @if ($screen == 'D') {
+    @media screen and (min-width: breakpoints.$lg-breakpoint) {
+      @content;
+    }
+  }
+}
