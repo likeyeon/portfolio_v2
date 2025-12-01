@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use '../constants/grids';
 @use '../constants/breakpoints';
 
@@ -35,12 +36,12 @@
   }
 
   [class^='col-'] {
-    padding: 0 grids.$gutter / 2;
+    padding: 0 math.div(grids.$gutter, 2);
   }
 
   @for $i from 1 through grids.$sm-columns {
     .col-sm-#{$i} {
-      width: percentage($i / grids.$sm-columns);
+      width: math.div($i, grids.$sm-columns) * 100%;
     }
   }
 
@@ -50,7 +51,7 @@
 
     @for $i from 1 through grids.$md-columns {
       .col-md-#{$i} {
-        width: percentage($i / grids.$md-columns);
+        width: math.div($i, grids.$md-columns) * 100%;
       }
     }
   }
@@ -61,7 +62,7 @@
 
     @for $i from 1 through grids.$lg-columns {
       .col-lg-#{$i} {
-        width: percentage($i / grids.$lg-columns);
+        width: math.div($i, grids.$lg-columns) * 100%;
       }
     }
   }
