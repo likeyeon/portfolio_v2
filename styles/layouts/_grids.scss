@@ -38,7 +38,7 @@
     padding: 0 grids.$gutter / 2;
   }
 
-  @for $i from 1 through $sm-columns {
+  @for $i from 1 through grids.$sm-columns {
     .col-sm-#{$i} {
       width: percentage($i / grids.$sm-columns);
     }
@@ -48,7 +48,7 @@
     padding: 0 grids.$md-margin;
     max-width: grids.$md-max-container;
 
-    @for $i from 1 through $md-columns {
+    @for $i from 1 through grids.$md-columns {
       .col-md-#{$i} {
         width: percentage($i / grids.$md-columns);
       }
@@ -59,7 +59,7 @@
     padding: 0;
     max-width: grids.$lg-container;
 
-    @for $i from 1 through $lg-columns {
+    @for $i from 1 through grids.$lg-columns {
       .col-lg-#{$i} {
         width: percentage($i / grids.$lg-columns);
       }
