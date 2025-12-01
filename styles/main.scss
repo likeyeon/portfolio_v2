@@ -1,16 +1,17 @@
-@forward './base/fonts';
-@forward './base/normalize';
-@forward './base/reset';
-
 @forward './constants/breakpoints';
 @forward './constants/colors';
 @forward './constants/grids';
 @forward './constants/typography';
 
-@forward './layouts/grids';
+@forward './base/fonts';
+@forward './base/normalize';
+@forward './base/reset';
 
 @forward './mixins/flexbox';
 @forward './mixins/positions';
 @forward './mixins/responsive';
 
 @forward './modules/tags';
+
+@forward './layouts/grids';
+@forward './layouts/gnb';

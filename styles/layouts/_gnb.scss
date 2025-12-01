@@ -1,0 +1,61 @@
+@use '../constants/colors';
+@use '../mixins/flexbox';
+@use '../mixins/responsive';
+@use '../constants/typography';
+
+.gnb {
+  &-wrapper {
+    @include flexbox.flexbox(between);
+    padding: 25px 0;
+  }
+
+  &-left {
+    .logo {
+      font-size: 24px;
+      font-family: typography.$font-code;
+      a::after {
+        display: inline-block;
+        content: '';
+        width: 12px;
+        height: 3px;
+        margin-left: 2px;
+        background-color: colors.$mint;
+      }
+    }
+  }
+
+  &-right {
+    display: block;
+  }
+
+  &-nav {
+    &-list {
+      @include flexbox.flexbox;
+      gap: 34px;
+    }
+
+    &-item {
+      a {
+        display: block;
+        font-size: 18px;
+        font-family: typography.$font-code;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: colors.$mint;
+        }
+      }
+    }
+  }
+
+  @include responsive.responsive(M) {
+    &-wrapper {
+      justify-content: center;
+    }
+
+    &-right {
+      display: none;
+    }
+  }
+}
