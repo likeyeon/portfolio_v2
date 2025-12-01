@@ -1,0 +1,68 @@
+@use '../constants/grids';
+@use '../constants/breakpoints';
+
+/*
+ * MOBILE (<768px) --------------------------------
+ * # of columns ------------- 4
+ * gutter ------------------- 20px
+ * margin ------------------- 5px
+ * container ---------------- 100% - (5px * 2)
+ *
+ * TABLET (=>768px) --------------------------------
+ * # of columns ------------- 12
+ * gutter ------------------- 20px
+ * margin ------------------- 30px
+ * container ---------------- 100% - (30px * 2)
+ * max-container-size ------- 960px
+ *
+ * DESKTOP (=>1200px) -------------------------------
+ * # of columns ------------- 12
+ * gutter ------------------- 20px
+ * unit --------------------- 75px
+ * margin ------------------- auto
+ * container ---------------- 1140px
+ * max-container-size ------ 1140px
+*/
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: grids.$sm-margin;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  [class^='col-'] {
+    padding: 0 grids.$gutter / 2;
+  }
+
+  @for $i from 1 through $sm-columns {
+    .col-sm-#{$i} {
+      width: percentage($i / grids.$sm-columns);
+    }
+  }
+
+  @media screen and (min-width: breakpoints.$md-breakpoint) {
+    padding: 0 grids.$md-margin;
+    max-width: grids.$md-max-container;
+
+    @for $i from 1 through $md-columns {
+      .col-md-#{$i} {
+        width: percentage($i / grids.$md-columns);
+      }
+    }
+  }
+
+  @media screen and (min-width: breakpoints.$lg-breakpoint) {
+    padding: 0;
+    max-width: grids.$lg-container;
+
+    @for $i from 1 through $lg-columns {
+      .col-lg-#{$i} {
+        width: percentage($i / grids.$lg-columns);
+      }
+    }
+  }
+}
