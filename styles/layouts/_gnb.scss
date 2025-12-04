@@ -3,10 +3,12 @@
 @use '../mixins/responsive';
 @use '../constants/typography';
 @use '../constants/dimensions';
+@use '../constants/z-indexes';
 
 .global-header {
   width: 100%;
   height: dimensions.$gnb-height-lg;
+  z-index: z-indexes.$gnb-level;
 
   .gnb {
     position: fixed;
