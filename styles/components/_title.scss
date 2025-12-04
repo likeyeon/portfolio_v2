@@ -1,0 +1,27 @@
+@use '../constants/colors';
+@use '../constants/typography';
+@use '../mixins/responsive';
+
+.main-section-header {
+  margin-bottom: 8px;
+
+  .title {
+    font-size: 24px;
+    font-family: typography.$font-code;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 3px;
+      margin-left: 2px;
+      background-color: colors.$mint;
+    }
+  }
+
+  @include responsive.responsive(M) {
+    .title {
+      font-size: 20px;
+    }
+  }
+}
