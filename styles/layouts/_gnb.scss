@@ -2,60 +2,96 @@
 @use '../mixins/flexbox';
 @use '../mixins/responsive';
 @use '../constants/typography';
+@use '../constants/dimensions';
 
-.gnb {
-  &-wrapper {
-    @include flexbox.flexbox(between);
-    padding: 25px 0;
-  }
+.global-header {
+  width: 100%;
+  height: dimensions.$gnb-height-lg;
 
-  &-left {
-    .logo {
-      font-size: 24px;
-      font-family: typography.$font-code;
-      a::after {
-        display: inline-block;
-        content: '';
-        width: 12px;
-        height: 3px;
-        margin-left: 2px;
-        background-color: colors.$mint;
+  .gnb {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: colors.$white;
+
+    &-wrapper {
+      @include flexbox.flexbox(between);
+      height: dimensions.$gnb-height-lg;
+    }
+
+    &-left {
+      .logo {
+        font-size: 24px;
+        font-family: typography.$font-code;
+
+        a::after {
+          display: inline-block;
+          content: '';
+          width: 12px;
+          height: 3px;
+          margin-left: 2px;
+          background-color: colors.$mint;
+        }
+      }
+    }
+
+    &-right {
+      display: block;
+    }
+
+    &-nav {
+      &-list {
+        @include flexbox.flexbox;
+        gap: 34px;
+      }
+
+      &-item {
+        a {
+          display: block;
+          font-size: 18px;
+          font-family: typography.$font-code;
+
+          &:hover,
+          &:active,
+          &:focus {
+            color: colors.$mint;
+          }
+        }
       }
     }
   }
 
-  &-right {
-    display: block;
-  }
-
-  &-nav {
-    &-list {
-      @include flexbox.flexbox;
-      gap: 34px;
-    }
-
-    &-item {
-      a {
-        display: block;
-        font-size: 18px;
-        font-family: typography.$font-code;
-
-        &:hover,
-        &:active,
-        &:focus {
-          color: colors.$mint;
+  @include responsive.responsive(T) {
+    .gnb {
+      &-nav {
+        &-list {
+          gap: 30px;
         }
       }
     }
   }
 
   @include responsive.responsive(M) {
-    &-wrapper {
-      justify-content: center;
-    }
+    height: dimensions.$gnb-height-sm;
 
-    &-right {
-      display: none;
+    .gnb {
+      position: static;
+
+      &-wrapper {
+        justify-content: center;
+        height: dimensions.$gnb-height-sm;
+      }
+
+      &-right {
+        display: none;
+      }
+
+      &-left {
+        .logo {
+          font-size: 20px;
+        }
+      }
     }
   }
 }
