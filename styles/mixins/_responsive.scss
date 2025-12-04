@@ -8,7 +8,7 @@
   }
 
   @if ($screen == 'T') {
-    @media screen and (max-width: #{breakpoints.$md-breakpoint - 1px}) {
+    @media screen and (max-width: #{breakpoints.$lg-breakpoint - 1px}) {
       @content;
     }
   }
