@@ -18,24 +18,26 @@
   </head>
   <body>
     <header class="global-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="gnb-wrapper">
-              <div class="gnb-left">
-                <h1 class="logo"><a href="/">Hayeon Cho</a></h1>
-              </div>
-              <div class="gnb-right">
-                <nav class="gnb-nav">
-                  <ul class="gnb-nav-list">
-                    <li class="gnb-nav-item"><a href="#">About</a></li>
-                    <li class="gnb-nav-item"><a href="#">Project</a></li>
-                    <li class="gnb-nav-item"><a href="#">Career</a></li>
-                    <li class="gnb-nav-item"><a href="#">Skill</a></li>
-                    <li class="gnb-nav-item"><a href="#">Activity</a></li>
-                    <li class="gnb-nav-item"><a href="#">Blog</a></li>
-                  </ul>
-                </nav>
+      <div class="gnb">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="gnb-wrapper">
+                <div class="gnb-left">
+                  <h1 class="logo"><a href="/">Hayeon Cho</a></h1>
+                </div>
+                <div class="gnb-right">
+                  <nav class="gnb-nav">
+                    <ul class="gnb-nav-list">
+                      <li class="gnb-nav-item"><a href="#">About</a></li>
+                      <li class="gnb-nav-item"><a href="#">Project</a></li>
+                      <li class="gnb-nav-item"><a href="#">Career</a></li>
+                      <li class="gnb-nav-item"><a href="#">Skill</a></li>
+                      <li class="gnb-nav-item"><a href="#">Activity</a></li>
+                      <li class="gnb-nav-item"><a href="#">Blog</a></li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
             </div>
           </div>
@@ -43,104 +45,112 @@
       </div>
     </header>
 
-    <div class="title">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="title-content">
-              <h2>
-                안녕하세요
-                <span class="title-icon-hand"
-                  ><img
-                    src="./assets/images/icon/icon-waving-hand.png"
-                    alt="" /></span
-                ><br />
-                편리함을 추구하는 UI 개발자
-                <a href="/">조하연</a>입니다
-                <span class="title-icon-profile">
-                  <img src="./assets/images/icon/icon-profile.svg" alt="" />
-                </span>
-              </h2>
+    <main class="main-content">
+      <div class="intro">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="intro-content">
+                <h2>
+                  안녕하세요
+                  <span class="intro-icon-hand"
+                    ><img
+                      src="./assets/images/icon/icon-waving-hand.png"
+                      alt="" /></span
+                  ><br />
+                  편리함을 추구하는 UI 개발자
+                  <a href="/">조하연</a>입니다
+                  <span class="intro-icon-profile">
+                    <img src="./assets/images/icon/icon-profile.svg" alt="" />
+                  </span>
+                </h2>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <section class="about" id="about">
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <div class="about-wrapper">
-              <div class="about-info">
-                <div class="about-info-text">
-                  <p class="info-title">
-                    누구나 쉽게 사용할 수 있는 인터페이스를 개발합니다.
-                  </p>
-                  <p class="info-sub">
-                    웹 접근성 및 표준성을 준수하고 웹 성능을 고려하며
-                    개발합니다. <br />
-                    에코마케팅에 재직하면서 사용자 경험을 고려한 다양한 커머스
-                    쇼핑몰을 제작하였습니다.<br />
-                  </p>
+            <section class="main-section about" id="about">
+              <header class="main-section-header">
+                <h2 class="title sm-only">About</h2>
+              </header>
+              <div class="about-wrapper">
+                <div class="about-info">
+                  <div class="about-info-text">
+                    <p class="info-title">
+                      누구나 쉽게 사용할 수 있는 인터페이스를 개발합니다.
+                    </p>
+                    <p class="info-sub">
+                      <span class="strong">웹 접근성 및 표준성</span>을 준수하고
+                      <span class="strong">웹 성능</span>을 고려하며 개발합니다.
+                      <br />
+                      에코마케팅에 재직하면서 사용자 경험을 고려한 다양한 커머스
+                      쇼핑몰을 제작하였습니다.<br />
+                    </p>
+                  </div>
+                  <div class="about-info-text">
+                    <p class="info-title">
+                      배운 내용을 기록하고 공유하며 성장합니다.
+                    </p>
+                    <p class="info-sub">
+                      매 프로젝트가 끝날 때마다 회고글을 작성하고 배운 내용을
+                      정리하여 <br />
+                      지금까지 <span class="strong">총 80+개</span>의 게시글을
+                      블로그에 작성하였습니다. <br />
+                      이 외에도 다양한
+                      <span class="strong">IT 동아리</span> 활동을 하며 지식을
+                      공유하였습니다.
+                    </p>
+                  </div>
                 </div>
-                <div class="about-info-text">
-                  <p class="info-title">
-                    배운 내용을 기록하고 공유하며 성장합니다.
-                  </p>
-                  <p class="info-sub">
-                    매 프로젝트가 끝날 때마다 회고글을 작성하고 배운 내용을
-                    정리하여 <br />
-                    지금까지 총 80+개의 게시글을 블로그에 작성하였습니다. <br />
-                    이 외에도 다양한 IT 동아리 활동을 하며 지식을
-                    공유하였습니다.
-                  </p>
+                <div class="about-links">
+                  <ul class="about-links-list">
+                    <li class="about-links-item">
+                      <a class="item-github" href="/" target="_blank">
+                        <i
+                          class="fa-brands fa-github"
+                          aria-label="깃허브 (새 탭에서 열림)"
+                        ></i>
+                        <span class="item-comment">github</span>
+                      </a>
+                    </li>
+                    <li class="about-links-item">
+                      <a class="item-velog" href="/" target="_blank">
+                        <i
+                          class="fa-brands fa-linkedin"
+                          aria-label="벨로그 (새 탭에서 열림)"
+                        ></i>
+                        <span class="item-comment">velog</span>
+                      </a>
+                    </li>
+                    <li class="about-links-item">
+                      <a class="item-email" href="/" target="_blank">
+                        <i
+                          class="fa-solid fa-at"
+                          aria-label="이메일 (새 탭에서 열림)"
+                        ></i>
+                        <span class="item-comment">email</span>
+                      </a>
+                    </li>
+                    <li class="about-links-item">
+                      <a class="item-resume" href="/" target="_blank">
+                        <i
+                          class="fa-solid fa-file-lines"
+                          aria-label="이력서 (새 탭에서 열림)"
+                        ></i>
+                        <span class="item-comment">resume</span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div class="about-links">
-                <ul class="about-links-list">
-                  <li class="about-links-item">
-                    <a class="item-github" href="/" target="_blank">
-                      <i
-                        class="fa-brands fa-github"
-                        aria-label="깃허브 (새 탭에서 열림)"
-                      ></i>
-                      <span class="item-comment">github</span>
-                    </a>
-                  </li>
-                  <li class="about-links-item">
-                    <a class="item-velog" href="/" target="_blank">
-                      <i
-                        class="fa-brands fa-linkedin"
-                        aria-label="벨로그 (새 탭에서 열림)"
-                      ></i>
-                      <span class="item-comment">velog</span>
-                    </a>
-                  </li>
-                  <li class="about-links-item">
-                    <a class="item-email" href="/" target="_blank">
-                      <i
-                        class="fa-solid fa-at"
-                        aria-label="이메일 (새 탭에서 열림)"
-                      ></i>
-                      <span class="item-comment">email</span>
-                    </a>
-                  </li>
-                  <li class="about-links-item">
-                    <a class="item-resume" href="/" target="_blank">
-                      <i
-                        class="fa-solid fa-file-lines"
-                        aria-label="이력서 (새 탭에서 열림)"
-                      ></i>
-                      <span class="item-comment">resume</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </section>
           </div>
         </div>
       </div>
-    </section>
+    </main>
   </body>
 </html>
