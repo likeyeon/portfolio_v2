@@ -8,10 +8,10 @@
 .global-header {
   width: 100%;
   height: dimensions.$gnb-height-lg;
-  z-index: z-indexes.$gnb-level;
 
   .gnb {
     position: fixed;
+    z-index: z-indexes.$gnb-level;
     width: 100%;
     top: 0;
     left: 0;
