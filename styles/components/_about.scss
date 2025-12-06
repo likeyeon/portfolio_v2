@@ -143,6 +143,14 @@
         }
       }
     }
+
+    .main-section-header {
+      margin-bottom: 0px;
+
+      .title {
+        margin-bottom: 10px;
+      }
+    }
   }
 
   @media screen and (max-width: 442px) {

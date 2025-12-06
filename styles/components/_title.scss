@@ -3,11 +3,12 @@
 @use '../mixins/responsive';
 
 .main-section-header {
-  margin-bottom: 8px;
+  margin-bottom: 28px;
 
   .title {
     font-size: 24px;
     font-family: typography.$font-code;
+    margin-bottom: 3px;
 
     &::after {
       content: '';
@@ -19,9 +20,21 @@
     }
   }
 
+  .summary {
+    color: colors.$tertiary;
+    font-size: 16px;
+  }
+
   @include responsive.responsive(M) {
+    margin-bottom: 20px;
+
     .title {
       font-size: 20px;
+      margin-bottom: 3px;
+    }
+
+    .summary {
+      font-size: 14px;
     }
   }
 }
