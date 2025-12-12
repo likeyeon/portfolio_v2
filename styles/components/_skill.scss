@@ -1,0 +1,97 @@
+@use '../constants/colors';
+@use '../mixins/responsive';
+@use '../mixins/flexbox';
+
+.skill {
+  &-tag {
+    &-list {
+      @include flexbox.flexbox(start);
+      margin-bottom: 20px;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &-item {
+      margin-right: 21px;
+
+      &:nth-last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-main {
+    &-list {
+      @include flexbox.flexbox(between);
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      border: 1px solid colors.$border;
+      border-radius: 10px;
+      padding: 24px;
+      flex: 1 1 auto;
+
+      .title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .item {
+        @include flexbox.flexbox(start, center);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.8;
+
+        .fa-check {
+          font-size: 25px;
+          color: colors.$mint;
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+
+  @include responsive.responsive(T) {
+    &-tag {
+      &-item {
+        margin-right: 13px;
+      }
+    }
+  }
+
+  @include responsive.responsive(M) {
+    &-tag {
+      &-item {
+        margin-right: 5px;
+      }
+    }
+
+    &-main {
+      &-list {
+        @include flexbox.flexbox(between);
+        gap: 10px;
+      }
+
+      &-item {
+        padding: 15px;
+
+        .title {
+          font-size: 18px;
+        }
+
+        .item {
+          font-size: 14px;
+
+          .fa-check {
+            font-size: 16px;
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+}
