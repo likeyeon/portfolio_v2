@@ -1,0 +1,74 @@
+@use '../constants/colors';
+@use '../constants/z-indexes';
+@use '../mixins/responsive';
+@use '../mixins/flexbox';
+@use '../mixins/positions';
+
+.certificate-modal {
+  @include positions.pos-center(fixed);
+  width: calc(100% - 30px);
+  max-width: 455px;
+  padding: 24px;
+  border-radius: 15px;
+  z-index: z-indexes.$modal-level;
+  background-color: colors.$white;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 200ms ease-in-out,
+    visibility 200ms ease-in-out;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-header {
+    @include flexbox.flexbox(between);
+    margin-bottom: 16px;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    button {
+      cursor: pointer;
+
+      i {
+        font-size: 30px;
+        color: colors.$dark;
+      }
+    }
+  }
+
+  &-content {
+    text-align: center;
+
+    img {
+      border: 1px solid colors.$border;
+      width: 100%;
+      max-width: 230px;
+      height: auto;
+    }
+  }
+
+  @include responsive.responsive(M) {
+    padding: 16px;
+
+    &-header {
+      margin-bottom: 12px;
+
+      h3 {
+        font-size: 20px;
+      }
+
+      button i {
+        font-size: 24px;
+      }
+    }
+    &-content img {
+      max-width: 175px;
+    }
+  }
+}
