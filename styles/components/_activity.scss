@@ -138,17 +138,15 @@
         }
 
         &-link {
-          button {
-            @include flexbox.flexbox;
-            border: 1px solid colors.$border;
-            border-radius: 27px;
-            font-size: 16px;
-            font-weight: 500;
-            color: colors.$secondary;
-            padding: 7px 12px;
-            cursor: pointer;
-            transition: all 0.1s;
-          }
+          @include flexbox.flexbox;
+          border: 1px solid colors.$border;
+          border-radius: 27px;
+          font-size: 16px;
+          font-weight: 500;
+          color: colors.$secondary;
+          padding: 7px 12px;
+          cursor: pointer;
+          transition: all 0.1s;
 
           i {
             margin-right: 7px;
@@ -157,10 +155,8 @@
           &:hover,
           &:active,
           &:focus {
-            button {
-              color: colors.$mint;
-              border-color: colors.$mint;
-            }
+            color: colors.$mint;
+            border-color: colors.$mint;
           }
         }
       }
@@ -267,10 +263,8 @@
           }
 
           &-link {
-            button {
-              font-size: 14px;
-              padding: 6px 10px;
-            }
+            font-size: 14px;
+            padding: 6px 10px;
 
             i {
               margin-right: 5px;
