@@ -1,0 +1,23 @@
+@use '../constants/colors';
+@use '../constants/z-indexes';
+@use '../mixins/positions';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(colors.$primary, 0.5);
+  z-index: z-indexes.$overlay-level;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 200ms ease-in-out,
+    visibility 200ms ease-in-out;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
