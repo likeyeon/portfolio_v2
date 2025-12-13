@@ -1,0 +1,283 @@
+@use '../constants/colors';
+@use '../mixins/responsive';
+@use '../mixins/flexbox';
+
+.activity {
+  &-club {
+    border: 1px solid colors.$border;
+    border-radius: 18px;
+    margin-bottom: 20px;
+
+    &-title {
+      @include flexbox.flexbox(start);
+      padding: 16px 24px;
+      border-bottom: 1px solid colors.$border;
+
+      i {
+        margin-right: 10px;
+        font-size: 24px;
+        color: colors.$secondary;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+    }
+
+    &-content {
+      padding: 25px 30px;
+    }
+
+    &-item {
+      &:nth-child(1) {
+        margin-bottom: 30px;
+      }
+
+      .title {
+        @include flexbox.flexbox(between);
+        margin-bottom: 3px;
+
+        &-main {
+          @include flexbox.flexbox(start);
+
+          .name {
+            font-size: 24px;
+            font-weight: 500;
+            margin-right: 10px;
+          }
+
+          .dates {
+            font-size: 16px;
+            color: colors.$tertiary;
+          }
+        }
+
+        &-link {
+          a {
+            @include flexbox.flexbox;
+            border: 1px solid colors.$border;
+            border-radius: 100%;
+            width: 36px;
+            height: 36px;
+            color: colors.$secondary;
+            font-size: 16px;
+            transition: all 0.1s;
+
+            &:hover,
+            &:active,
+            &:focus {
+              color: colors.$mint;
+              border-color: colors.$mint;
+            }
+          }
+        }
+      }
+
+      .introduction {
+        &-main {
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 3px;
+        }
+
+        &-sub {
+          font-size: 16px;
+          margin-left: 3px;
+          word-break: keep-all;
+        }
+      }
+    }
+  }
+
+  &-certificate {
+    border: 1px solid colors.$border;
+    border-radius: 18px;
+
+    &-title {
+      @include flexbox.flexbox(start);
+      padding: 16px 24px;
+      border-bottom: 1px solid colors.$border;
+
+      i {
+        margin-right: 10px;
+        font-size: 24px;
+        color: colors.$secondary;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+    }
+
+    &-content {
+      padding: 25px 30px;
+    }
+
+    &-item {
+      &:nth-child(1) {
+        margin-bottom: 15px;
+      }
+
+      .title {
+        @include flexbox.flexbox(between);
+        margin-bottom: 3px;
+
+        &-main {
+          @include flexbox.flexbox(start);
+
+          .name {
+            font-size: 24px;
+            font-weight: 500;
+            margin-right: 10px;
+          }
+
+          .dates {
+            font-size: 16px;
+            color: colors.$tertiary;
+          }
+        }
+
+        &-link {
+          button {
+            @include flexbox.flexbox;
+            border: 1px solid colors.$border;
+            border-radius: 27px;
+            font-size: 16px;
+            font-weight: 500;
+            color: colors.$secondary;
+            padding: 7px 12px;
+            cursor: pointer;
+            transition: all 0.1s;
+          }
+
+          i {
+            margin-right: 7px;
+          }
+
+          &:hover,
+          &:active,
+          &:focus {
+            button {
+              color: colors.$mint;
+              border-color: colors.$mint;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive.responsive(M) {
+    &-club {
+      margin-bottom: 10px;
+
+      &-title {
+        padding: 15px;
+
+        i {
+          margin-right: 7px;
+          font-size: 18px;
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+      }
+
+      &-content {
+        padding: 15px 15px;
+      }
+
+      &-item {
+        &:nth-child(1) {
+          margin-bottom: 15px;
+        }
+
+        .title {
+          margin-bottom: 3px;
+
+          &-main {
+            .name {
+              font-size: 18px;
+              margin-right: 8px;
+            }
+
+            .dates {
+              font-size: 14px;
+            }
+          }
+
+          &-link {
+            a {
+              width: 28px;
+              height: 28px;
+              font-size: 12px;
+            }
+          }
+        }
+
+        .introduction {
+          &-main {
+            font-size: 14px;
+            margin-bottom: 1px;
+          }
+
+          &-sub {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    &-certificate {
+      &-title {
+        padding: 15px;
+
+        i {
+          margin-right: 7px;
+          font-size: 18px;
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+      }
+
+      &-content {
+        padding: 15px 15px;
+      }
+
+      &-item {
+        &:nth-child(1) {
+          margin-bottom: 10px;
+        }
+
+        .title {
+          margin-bottom: 3px;
+
+          &-main {
+            .name {
+              font-size: 18px;
+              margin-right: 8px;
+            }
+
+            .dates {
+              font-size: 14px;
+            }
+          }
+
+          &-link {
+            button {
+              font-size: 14px;
+              padding: 6px 10px;
+            }
+
+            i {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
