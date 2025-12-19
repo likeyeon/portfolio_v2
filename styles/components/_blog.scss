@@ -1,0 +1,108 @@
+@use '../constants/colors';
+@use '../mixins/positions';
+@use '../mixins/flexbox';
+@use '../mixins/responsive';
+
+.blog {
+  .rolling-container {
+    display: flex;
+    overflow: hidden;
+
+    &:hover {
+      .rolling-wrapper {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  .rolling-wrapper {
+    animation: rolling 30s linear infinite;
+
+    ul {
+      @include flexbox.flexbox(start);
+    }
+  }
+
+  .rolling-item {
+    width: 455px;
+    flex-shrink: 0;
+    border: 1px solid colors.$border;
+    border-radius: 18px;
+    background-color: colors.$white;
+    padding: 30px;
+    margin-right: 20px;
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 16px;
+      display: -webkit-box;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+    }
+
+    .tag-list {
+      @include flexbox.flexbox(start);
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      margin-right: 5px;
+
+      &:nth-last-child {
+        margin-right: 0;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: colors.$mint;
+
+      .title {
+        color: colors.$mint;
+      }
+    }
+  }
+
+  @include responsive.responsive(M) {
+    .rolling-item {
+      width: 290px;
+      padding: 20px 15px;
+      margin-right: 10px;
+
+      .title {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      .description {
+        font-size: 14px;
+      }
+
+      .tag-list {
+        margin-bottom: 8px;
+      }
+
+      .tag {
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+@keyframes rolling {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
