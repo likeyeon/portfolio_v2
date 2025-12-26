@@ -1,0 +1,355 @@
+@use '../constants/colors';
+@use '../constants/typography';
+@use '../mixins/responsive';
+@use '../mixins/flexbox';
+@use '../mixins/positions';
+
+.detail {
+  &-top {
+    padding-top: 86px;
+    margin-bottom: 30px;
+
+    &-back {
+      display: inline-block;
+      font-size: 16px;
+      font-family: typography.$font-code;
+      color: colors.$mint;
+
+      i {
+        margin-right: 5px;
+        transition: 0.2s ease-in-out;
+      }
+
+      &::after {
+        display: inline-block;
+        content: '';
+        width: 8px;
+        height: 2px;
+        margin-left: 2px;
+        background-color: colors.$mint;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        i {
+          transform: translateX(-8px);
+        }
+      }
+    }
+
+    &-title {
+      font-size: 48px;
+      line-height: 1.3;
+    }
+  }
+
+  &-info {
+    max-width: 455px;
+
+    &-item {
+      padding-top: 46px;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 7px;
+      }
+    }
+
+    .summary {
+      padding-top: 0;
+
+      &-tag-item {
+        font-size: 14px;
+        margin-right: 3px;
+
+        &:nth-last-child {
+          margin-right: 0px;
+        }
+      }
+
+      &-description {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      &-link-list {
+        @include flexbox.flexbox(start);
+        margin-top: 10px;
+      }
+
+      &-link-item {
+        font-size: 16px;
+        color: colors.$secondary;
+        @include flexbox.flexbox(start);
+        font-weight: 500;
+        border-bottom: 1px solid colors.$secondary;
+        transition: 0.2s ease-in-out;
+
+        &:nth-child(1) {
+          margin-right: 23px;
+        }
+
+        i {
+          margin-right: 3px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: colors.$mint;
+          border-color: colors.$mint;
+        }
+      }
+    }
+
+    .function {
+      .description {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .code {
+        margin-top: 2px;
+
+        &-button {
+          color: colors.$mint;
+          margin-left: 5px;
+          cursor: pointer;
+
+          i {
+            transition: 0.2s ease-in-out;
+            margin-left: 6px;
+          }
+        }
+
+        &-text {
+          display: none;
+          font-size: 12px;
+          font-family: typography.$font-code;
+          margin: 8px 0;
+          padding: 15px;
+          background: colors.$background;
+          border-radius: 5px;
+        }
+
+        &.is-active {
+          .code-button {
+            i {
+              transform: rotate(-180deg);
+            }
+          }
+
+          .code-text {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .issue {
+      &-item {
+        margin-bottom: 20px;
+        font-size: 16px;
+
+        .title {
+          font-weight: 700;
+          @include flexbox.flexbox(start);
+          margin-bottom: 2px;
+
+          i {
+            color: colors.$secondary;
+            margin-right: 6px;
+          }
+        }
+
+        .description {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &-image {
+    &-list {
+      @include flexbox.flexbox(between);
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    &-item {
+      width: 265px;
+      text-align: center;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 5px;
+      }
+
+      figcaption {
+        font-size: 14px;
+        color: colors.$tertiary;
+      }
+    }
+
+    &-pagination {
+      display: none;
+    }
+  }
+
+  @include responsive.responsive(T) {
+    &-image {
+      &-item {
+        width: calc((100% - 20px) / 2);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .row:nth-child(2) {
+      flex-direction: column-reverse;
+    }
+
+    .col-md-6 {
+      width: 100%;
+    }
+
+    &-info {
+      max-width: 100%;
+    }
+
+    &-image {
+      margin-bottom: 15px;
+
+      &-swiper {
+        overflow: hidden;
+        position: relative;
+      }
+
+      &-list {
+        flex-wrap: nowrap;
+      }
+
+      &-pagination {
+        @include flexbox.flexbox(center);
+        margin-bottom: 20px;
+
+        .swiper-pagination-bullet {
+          width: 9px;
+          height: 9px;
+          margin: 0 5px !important;
+          background-color: colors.$tertiary;
+          opacity: 1;
+
+          &-active {
+            width: 11px;
+            height: 11px;
+            background-color: colors.$mint;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive.responsive(M) {
+    &-top {
+      padding-top: 48px;
+      margin-bottom: 20px;
+
+      &-back {
+        font-size: 14px;
+      }
+
+      &-title {
+        font-size: 32px;
+      }
+    }
+
+    &-image {
+      margin-bottom: 12px;
+
+      &-pagination {
+        margin-bottom: 11px;
+
+        .swiper-pagination-bullet {
+          width: 7px;
+          height: 7px;
+          margin: 0 4px !important;
+
+          &-active {
+            width: 9px;
+            height: 9px;
+          }
+        }
+      }
+    }
+
+    &-info {
+      &-item {
+        padding-top: 37px;
+
+        h2 {
+          font-size: 20px;
+        }
+      }
+
+      .summary {
+        &-tag-item {
+          font-size: 12px;
+          margin-right: 1px;
+        }
+
+        &-description {
+          margin-top: 8px;
+          font-size: 14px;
+        }
+
+        &-link {
+          &-list {
+            margin-top: 8px;
+          }
+
+          &-item {
+            font-size: 14px;
+
+            &:nth-child(1) {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+
+      .function {
+        .description {
+          font-size: 14px;
+        }
+
+        .code {
+          &-button {
+            font-size: 14px;
+            margin-left: 4px;
+
+            i {
+              margin-left: 4px;
+            }
+          }
+
+          &-text {
+            font-size: 11px;
+            padding: 10px;
+          }
+        }
+      }
+
+      .issue {
+        &-item {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
