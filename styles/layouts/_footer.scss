@@ -1,0 +1,23 @@
+@use '../constants/colors';
+@use '../mixins/responsive';
+
+.global-footer {
+  padding: 50px 0;
+  p {
+    text-align: center;
+    color: colors.$tertiary;
+    font-weight: 500;
+  }
+
+  @include responsive.responsive(T) {
+    padding: 40px 0;
+  }
+
+  @include responsive.responsive(M) {
+    padding: 30px 0;
+
+    p {
+      font-size: 13px;
+    }
+  }
+}

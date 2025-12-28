@@ -46,6 +46,7 @@
 
   &-info {
     max-width: 455px;
+    padding-bottom: 80px;
 
     &-item {
       padding-top: 46px;
@@ -153,6 +154,10 @@
         margin-bottom: 20px;
         font-size: 16px;
 
+        &:last-child {
+          margin-bottom: 0;
+        }
+
         .title {
           font-weight: 700;
           @include flexbox.flexbox(start);
@@ -202,6 +207,10 @@
   }
 
   @include responsive.responsive(T) {
+    &-info {
+      padding-bottom: 70px;
+    }
+
     &-image {
       &-item {
         width: calc((100% - 20px) / 2);
@@ -289,6 +298,8 @@
     }
 
     &-info {
+      padding-bottom: 54px;
+
       &-item {
         padding-top: 37px;
 

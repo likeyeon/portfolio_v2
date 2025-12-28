@@ -4,6 +4,8 @@
 @use '../mixins/responsive';
 
 .blog {
+  padding-bottom: 80px;
+
   .rolling-container {
     display: flex;
     overflow: hidden;
@@ -72,7 +74,13 @@
     }
   }
 
+  @include responsive.responsive(T) {
+    padding-bottom: 70px;
+  }
+
   @include responsive.responsive(M) {
+    padding-bottom: 54px;
+
     .rolling-item {
       width: 290px;
       padding: 20px 15px;
