@@ -9,7 +9,7 @@
   width: 100%;
   height: dimensions.$gnb-height-lg;
 
-  .gnb {
+  .header {
     position: fixed;
     z-index: z-indexes.$gnb-level;
     width: 100%;
@@ -22,7 +22,7 @@
       height: dimensions.$gnb-height-lg;
     }
 
-    &-left {
+    &-title {
       .logo {
         font-size: 24px;
         font-family: typography.$font-code;
@@ -38,25 +38,26 @@
       }
     }
 
-    &-right {
+    &-tab {
       display: block;
-    }
-
-    &-nav {
       &-list {
         @include flexbox.flexbox;
         gap: 34px;
       }
 
       &-item {
-        a {
+        &.is-active {
+          button {
+            color: colors.$mint;
+          }
+        }
+
+        button {
           display: block;
           font-size: 18px;
           font-family: typography.$font-code;
 
-          &:hover,
-          &:active,
-          &:focus {
+          &:hover {
             color: colors.$mint;
           }
         }
@@ -65,19 +66,15 @@
   }
 
   @include responsive.responsive(T) {
-    .gnb {
-      &-nav {
-        &-list {
-          gap: 30px;
-        }
-      }
+    .header-tab-list {
+      gap: 30px;
     }
   }
 
   @include responsive.responsive(M) {
     height: dimensions.$gnb-height-sm;
 
-    .gnb {
+    .header {
       position: static;
 
       &-wrapper {
@@ -85,11 +82,11 @@
         height: dimensions.$gnb-height-sm;
       }
 
-      &-right {
+      &-tab {
         display: none;
       }
 
-      &-left {
+      &-title {
         .logo {
           font-size: 20px;
         }
