@@ -24,25 +24,59 @@
   </head>
   <body>
     <header class="global-header">
-      <div class="gnb">
+      <div class="header">
         <div class="container">
           <div class="row">
             <div class="col-sm-4">
-              <div class="gnb-wrapper">
-                <div class="gnb-left">
+              <div class="header-wrapper">
+                <div class="header-title">
                   <h1 class="logo"><a href="/">Hayeon Cho</a></h1>
                 </div>
-                <div class="gnb-right">
-                  <nav class="gnb-nav">
-                    <ul class="gnb-nav-list">
-                      <li class="gnb-nav-item"><a href="#">About</a></li>
-                      <li class="gnb-nav-item"><a href="#">Project</a></li>
-                      <li class="gnb-nav-item"><a href="#">Career</a></li>
-                      <li class="gnb-nav-item"><a href="#">Skill</a></li>
-                      <li class="gnb-nav-item"><a href="#">Activity</a></li>
-                      <li class="gnb-nav-item"><a href="#">Blog</a></li>
-                    </ul>
-                  </nav>
+                <div class="header-tab">
+                  <ul class="header-tab-list" role="tablist">
+                    <li
+                      class="header-tab-item"
+                      role="tab"
+                      aria-labelledby="about"
+                    >
+                      <button>About</button>
+                    </li>
+                    <li
+                      class="header-tab-item"
+                      role="tab"
+                      aria-labelledby="project"
+                    >
+                      <button>Project</button>
+                    </li>
+                    <li
+                      class="header-tab-item"
+                      role="tab"
+                      aria-labelledby="career"
+                    >
+                      <button>Career</button>
+                    </li>
+                    <li
+                      class="header-tab-item"
+                      role="tab"
+                      aria-labelledby="skill"
+                    >
+                      <button>Skill</button>
+                    </li>
+                    <li
+                      class="header-tab-item"
+                      role="tab"
+                      aria-labelledby="activity"
+                    >
+                      <button>Activity</button>
+                    </li>
+                    <li
+                      class="header-tab-item"
+                      role="tab"
+                      aria-labelledby="blog"
+                    >
+                      <button>Blog</button>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -55,35 +89,26 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <div class="intro">
-              <div class="intro-content">
-                <h2>
-                  안녕하세요
-                  <span class="intro-icon-hand"
-                    ><img
-                      src="./assets/images/icon/icon-waving-hand.png"
-                      alt="" /></span
-                  ><br />
-                  편리함을 추구하는 UI 개발자
-                  <a href="/">조하연</a>입니다
-                  <span class="intro-icon-profile">
-                    <img src="./assets/images/icon/icon-profile.svg" alt="" />
-                  </span>
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
             <section class="main-section about" id="about">
-              <header class="main-section-header">
-                <h2 class="title sm-only">About</h2>
+              <header class="main-section-header visually-hidden">
+                <h2 class="title">About</h2>
               </header>
-              <div class="about-wrapper">
+              <div class="about-content">
+                <div class="about-intro">
+                  <h3 class="intro-text">
+                    안녕하세요
+                    <span class="icon-hand"
+                      ><img
+                        src="./assets/images/icon/icon-waving-hand.png"
+                        alt="" /></span
+                    ><br />
+                    편리함을 추구하는 UI 개발자
+                    <a class="name" href="/">조하연</a>입니다
+                    <span class="icon-profile">
+                      <img src="./assets/images/icon/icon-profile.svg" alt="" />
+                    </span>
+                  </h3>
+                </div>
                 <div class="about-info">
                   <div class="about-info-text">
                     <p class="info-title">
@@ -793,5 +818,6 @@
     <script src="/js/accordion.js"></script>
     <script src="/js/certificate-modal.js"></script>
     <script src="/js/blog-slide.js"></script>
+    <script src="/js/section-tab.js"></script>
   </body>
 </html>
