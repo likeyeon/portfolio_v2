@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hayeon's Portfolio</title>
+    <script
+      src="https://kit.fontawesome.com/f0c26c0bfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <main class="project-detail">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="project-detail-top">
+              <a class="project-detail-top-back" href="/index.html">
+                <i class="fa-solid fa-arrow-left"></i>Hayeon Cho</a
+              >
+              <h1 class="project-detail-top-title">젠데이터</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-4">
+            <div class="project-detail-info">
+              <div class="project-detail-info-item summary">
+                <ul class="summary-tag-list">
+                  <li class="summary-tag-item tag">React</li>
+                  <li class="summary-tag-item tag">HTML5</li>
+                  <li class="summary-tag-item tag">SCSS</li>
+                </ul>
+                <p class="summary-description">
+                  아임웹으로 제작된 기존 웹사이트를 React 컴포넌트 구조로
+                  재구성하여 클론코딩하였습니다.
+                </p>
+                <div class="summary-link-list">
+                  <a
+                    class="summary-link-item"
+                    href="https://gendata.vercel.app/"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i>Demo</a
+                  >
+                  <a
+                    class="summary-link-item"
+                    href="https://github.com/likeyeon/Gendata"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i>Github</a
+                  >
+                </div>
+                <p class="summary-period">2023.08</p>
+                <p class="summary-people">Publisher 4명 • 기여도 30%</p>
+              </div>
+              <div class="project-detail-info-item function">
+                <h2 class="function-title">구현 기능</h2>
+                <div class="function-content">
+                  <div class="function-category">
+                    <ul class="function-category-list">
+                      <li class="function-category-item">
+                        <p class="description">
+                          <strong>window.matchMedia</strong> 함수로 화면 너비를
+                          검사했을 때 991px을 초과하면 모바일 헤더가 자동으로
+                          닫히게 하고, <strong>cleanup 함수</strong>를 통해
+                          이벤트 리스너를 제거하여
+                          <strong>성능 저하를 방지</strong>했습니다.
+                        </p>
+                        <div class="detail">
+                          <button class="detail-button">
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <p class="detail-text">
+                            <img
+                              src="../assets/images/project03-implement-01.png"
+                              alt="관련 코드"
+                            />
+                          </p>
+                        </div>
+                      </li>
+                      <li class="function-category-item">
+                        <p class="description">
+                          <strong>useLocation()</strong>을 사용하여 세부
+                          카테고리 pathname에 해당하는 경우, 해당 메뉴 탭이
+                          펼쳐지도록 구현했습니다.
+                        </p>
+                        <div class="detail">
+                          <button class="detail-button">
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <p class="detail-text">
+                            <img
+                              src="../assets/images/project03-implement-02.png"
+                              alt="관련 코드"
+                            />
+                          </p>
+                        </div>
+                      </li>
+                      <li class="function-category-item">
+                        <p class="description">
+                          <strong>react-helmet</strong>으로 페이지별 title을
+                          설정하였습니다.
+                        </p>
+                        <div class="detail">
+                          <button class="detail-button">
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <p class="detail-text">
+                            <img
+                              src="../assets/images/project03-implement-03.png"
+                              alt="관련 코드"
+                            />
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-4">
+            <div class="project-detail-image">
+              <div class="project-detail-image-swiper">
+                <ul class="project-detail-image-list swiper-wrapper">
+                  <li class="project-detail-image-item swiper-slide">
+                    <figure>
+                      <img
+                        src="../assets/images/project03-capture-01.png"
+                        alt=""
+                      />
+                      <figcaption>메인 페이지</figcaption>
+                    </figure>
+                  </li>
+                  <li class="project-detail-image-item swiper-slide">
+                    <figure>
+                      <img
+                        src="../assets/images/project03-capture-02.png"
+                        alt=""
+                      />
+                      <figcaption>데이터 가공 페이지</figcaption>
+                    </figure>
+                  </li>
+                  <li class="project-detail-image-item swiper-slide">
+                    <figure>
+                      <img
+                        src="../assets/images/project03-capture-03.png"
+                        alt=""
+                      />
+                      <figcaption>소식 페이지</figcaption>
+                    </figure>
+                  </li>
+                  <li class="project-detail-image-item swiper-slide">
+                    <figure>
+                      <img
+                        src="../assets/images/project03-capture-04.png"
+                        alt=""
+                      />
+                      <figcaption>문의하기 페이지</figcaption>
+                    </figure>
+                  </li>
+                </ul>
+                <div
+                  class="project-detail-image-pagination swiper-pagination"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="global-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <p>Copyright 2025. Hayeon Cho. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/detail.js"></script>
+  </body>
+</html>

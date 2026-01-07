@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hayeon's Portfolio</title>
+    <script
+      src="https://kit.fontawesome.com/f0c26c0bfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <main class="project-detail">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="project-detail-top">
+              <a class="project-detail-top-back" href="/index.html">
+                <i class="fa-solid fa-arrow-left"></i>Hayeon Cho</a
+              >
+              <h1 class="project-detail-top-title">국립농산물품질관리원</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-4">
+            <div class="project-detail-info">
+              <div class="project-detail-info-item summary">
+                <ul class="summary-tag-list">
+                  <li class="summary-tag-item tag">HTML5</li>
+                  <li class="summary-tag-item tag">SCSS</li>
+                  <li class="summary-tag-item tag">JavaScript</li>
+                  <li class="summary-tag-item tag">Webpack</li>
+                  <li class="summary-tag-item tag">Babel</li>
+                </ul>
+                <p class="summary-description">
+                  웹 접근성과 크로스 브라우징에 중점을 두고 기존 웹사이트를
+                  클론코딩하였습니다.
+                </p>
+                <div class="summary-link-list">
+                  <a
+                    class="summary-link-item"
+                    href="https://national-farm.vercel.app/"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i>Demo</a
+                  >
+                  <a
+                    class="summary-link-item"
+                    href="https://github.com/likeyeon/national-farm"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i>Github</a
+                  >
+                </div>
+                <p class="summary-period">2025.10 ~ 2025.11</p>
+                <p class="summary-people">개인 프로젝트</p>
+              </div>
+              <div class="project-detail-info-item function">
+                <h2 class="function-title">구현 기술</h2>
+                <div class="function-content">
+                  <div class="function-category">
+                    <span class="title">접근성 개선</span>
+                    <ul class="function-category-list">
+                      <li class="function-category-item"></li>
+                      <li class="function-category-item">
+                        <p class="description">
+                          스크린 리더 사용자를 위해 .sr-only 클래스, aria-label
+                          속성을 사용하여 설명을 보충하였습니다.
+                        </p>
+                        <div class="detail">
+                          <button class="detail-button">
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <p class="detail-text">
+                            <img
+                              src="../assets/images/project02-implement-02.png"
+                              alt=".sr-only 클래스 코드"
+                            />
+                            <img
+                              src="../assets/images/project02-implement-01.png"
+                              alt="aria-label 사용 예시"
+                            />
+                          </p>
+                        </div>
+                      </li>
+                      <li class="function-category-item">
+                        <p class="description">
+                          본문 바로가기 버튼을 추가하여 해당 링크에서 엔터를
+                          누르면 바로 본문으로 건너띄도록 구현하였습니다.
+                        </p>
+                        <div class="detail">
+                          <button class="detail-button">
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <p class="detail-text">
+                            <img
+                              src="../assets/images/project02-implement-04.png"
+                              alt="본문 바로가기 화면"
+                            />
+                            <img
+                              src="../assets/images/project02-implement-03.png"
+                              alt="본문 바로가기 코드"
+                            />
+                          </p>
+                        </div>
+                      </li>
+                      <li class="function-category-item">
+                        <p class="description">
+                          스크린 리더 사용자가 몇 번째 슬라이드인지 알 수 있도록
+                          aria-live="polite" 속성을 추가하여 알림 기능을
+                          제공하였습니다.
+                        </p>
+                      </li>
+                      <li class="function-category-item">
+                        <p class="description">
+                          탭 메뉴에 키보드 이벤트 리스너를 추가하여 키보드
+                          만으로도 편리하게 이용할 수 있도록 하였습니다.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="function-category">
+                    <span class="title">크로스 브라우징</span>
+                    <ul class="function-category-list">
+                      <li class="function-category-item">
+                        <p class="description">
+                          IE11 환경에서만 별도의 스타일을 적용하기 위해, 전용
+                          믹스인(Mixin)을 만들어 관리했습니다.
+                        </p>
+                        <div class="detail">
+                          <button class="detail-button">
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <p class="detail-text">
+                            <img
+                              src="../assets/images/project02-implement-05.png"
+                              alt="IE 전용 믹스인 코드"
+                            />
+                          </p>
+                        </div>
+                      </li>
+                      <li class="function-category-item">
+                        <p class="description">
+                          일부 라이브러리의 최신 버전은 IE를 지원하지 않기
+                          때문에, 조건부 주석을 사용하여 IE에서는 구버전, 그 외
+                          브라우저에서는 최신 버전 CDN을 적용하였습니다.
+                        </p>
+                        <div class="detail">
+                          <button class="detail-button">
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <p class="detail-text">
+                            <img
+                              src="../assets/images/project02-implement-06.png"
+                              alt="조건부 주석 예시"
+                            />
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="project-detail-info-item issue">
+                <h2 class="issue-title">트러블 슈팅</h2>
+                <div class="issue-content">
+                  <div class="issue-category">
+                    <span class="title"
+                      ><i class="fa-solid fa-triangle-exclamation"></i> 문제
+                      배경</span
+                    >
+                    <p class="description">
+                      IE 환경에서 ES6+ 문법을 사용한 자바스크립트 코드가
+                      정상적으로 동작하지 않는 문제가 발생했습니다.
+                    </p>
+                  </div>
+                  <div class="issue-category">
+                    <span class="title"
+                      ><i class="fa-regular fa-lightbulb"></i> 해결 방법</span
+                    >
+                    <p class="description">
+                      <strong
+                        >Babel과 Webpack을 활용하여 트랜스파일링 및 번들링
+                        환경</strong
+                      >을 구성했습니다.
+                    </p>
+                    <ul class="issue-category-list">
+                      <li class="issue-category-item">
+                        <p class="description symbol">
+                          <strong>Babel</strong>을 사용하여 ES6+ 문법으로 작성된
+                          자바스크립트 코드를 IE에서도 실행 가능한 ES5 문법으로
+                          트랜스파일링했습니다.
+                        </p>
+                      </li>
+                      <li class="issue-category-item">
+                        <p class="description symbol">
+                          <strong>Polyfill</strong>을 적용하여 IE에서 지원하지
+                          않는 ES6 이후에 추가된 Fetch API를 보완했습니다.
+                        </p>
+                      </li>
+                      <li class="issue-category-item">
+                        <p class="description symbol">
+                          <strong>Webpack의 babel-loader</strong>를 사용해
+                          자바스크립트 파일을 빌드 단계에서 자동으로
+                          트랜스파일링할 수 있도록 설정하고, 여러 모듈로 분리된
+                          코드를 하나의 번들 파일로 묶었습니다.
+                        </p>
+                        <div class="detail">
+                          <a
+                            class="detail-link"
+                            href="https://github.com/likeyeon/national-farm/blob/main/webpack.config.js"
+                            target="_blank"
+                          >
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="issue-category">
+                    <span class="title"
+                      ><i class="fa-regular fa-thumbs-up"></i> 개선된 점</span
+                    >
+                    <ul class="issue-category-list">
+                      <li class="issue-category-item">
+                        <p class="description">
+                          ES6+ 문법으로 작성된 자바스크립트 코드가 IE 환경에서도
+                          문제없이 실행되도록 개선되었습니다.
+                        </p>
+                      </li>
+                      <li class="issue-category-item">
+                        <p class="description">
+                          여러 개의 자바스크립트 파일을 단일 번들 파일로
+                          관리하여 HTTP 요청 수를 줄이고 리소스 로딩 효율을
+                          향상시켰습니다.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-4">
+            <div class="project-detail-image">
+              <div class="project-detail-image-swiper">
+                <ul class="project-detail-image-list swiper-wrapper">
+                  <li class="project-detail-image-item swiper-slide">
+                    <figure>
+                      <img
+                        src="../assets/images/project02-capture-01.png"
+                        alt=""
+                      />
+                      <figcaption>section1</figcaption>
+                    </figure>
+                  </li>
+                  <li class="project-detail-image-item swiper-slide">
+                    <figure>
+                      <img
+                        src="../assets/images/project02-capture-02.png"
+                        alt=""
+                      />
+                      <figcaption>section2</figcaption>
+                    </figure>
+                  </li>
+                  <li class="project-detail-image-item swiper-slide">
+                    <figure>
+                      <img
+                        src="../assets/images/project02-capture-03.png"
+                        alt=""
+                      />
+                      <figcaption>section3</figcaption>
+                    </figure>
+                  </li>
+                  <li class="project-detail-image-item swiper-slide">
+                    <figure>
+                      <img
+                        src="../assets/images/project02-capture-04.png"
+                        alt=""
+                      />
+                      <figcaption>헤더 GNB, LNB</figcaption>
+                    </figure>
+                  </li>
+                </ul>
+                <div
+                  class="project-detail-image-pagination swiper-pagination"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="global-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <p>Copyright 2025. Hayeon Cho. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/detail.js"></script>
+  </body>
+</html>
