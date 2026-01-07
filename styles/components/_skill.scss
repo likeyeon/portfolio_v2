@@ -24,16 +24,16 @@
 
   &-main {
     &-list {
-      @include flexbox.flexbox(between);
-      gap: 20px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: -10px;
     }
 
     &-item {
       border: 1px solid colors.$border;
       border-radius: 10px;
       padding: 24px;
-      flex: 1 1 auto;
+      margin: 10px;
 
       .title {
         font-size: 24px;
@@ -41,7 +41,7 @@
       }
 
       .item {
-        @include flexbox.flexbox(start, center);
+        @include flexbox.flexbox(start, start);
         font-size: 20px;
         font-weight: 500;
         line-height: 1.8;
@@ -49,7 +49,7 @@
         .fa-check {
           font-size: 25px;
           color: colors.$mint;
-          margin-right: 7px;
+          margin: 7px 7px 0 0;
         }
       }
     }
@@ -72,12 +72,13 @@
 
     &-main {
       &-list {
-        @include flexbox.flexbox(between);
-        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        margin: -5px;
       }
 
       &-item {
         padding: 15px;
+        margin: 5px;
 
         .title {
           font-size: 18px;
