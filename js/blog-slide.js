@@ -5,13 +5,14 @@ function createTagList(tags) {
 function renderBlogData(posts) {
   const rollingWrapper = document.querySelector('.blog .rolling-wrapper');
   const rollingList = document.createElement('ul');
+  rollingList.className = 'rolling-list';
 
   posts.map((post) => {
     const item = document.createElement('li');
     item.className = 'rolling-item';
 
     item.innerHTML = `
-     <a href="/">
+     <a href=${post.url} target="_blank" rel="noopener noreferrer">
       <div class="title">${post.title}</div>
       <ul class="tag-list">
       ${createTagList(post.tags)}
