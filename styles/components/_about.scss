@@ -42,11 +42,8 @@
         width: 50px;
         display: inline-block;
         transition: 0.3s transform;
-
-        &:hover {
-          animation-name: rotate-hand;
-          animation-duration: 2s;
-        }
+        animation-name: rotate-hand;
+        animation-duration: 2s;
 
         img {
           display: block;
