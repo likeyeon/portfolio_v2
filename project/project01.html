@@ -22,176 +22,213 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <main class="detail">
+    <main class="project-detail">
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <div class="detail-top">
-              <a class="detail-top-back" href="/index.html">
+            <div class="project-detail-top">
+              <a class="project-detail-top-back" href="/index.html">
                 <i class="fa-solid fa-arrow-left"></i>Hayeon Cho</a
               >
-              <h1 class="detail-top-title">프로젝트 제목</h1>
+              <h1 class="project-detail-top-title">포트폴리오 웹사이트</h1>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-4">
-            <div class="detail-info">
-              <div class="detail-info-item summary">
+            <div class="project-detail-info">
+              <div class="project-detail-info-item summary">
                 <ul class="summary-tag-list">
                   <li class="summary-tag-item tag">HTML5</li>
-                  <li class="summary-tag-item tag">HTML5</li>
-                  <li class="summary-tag-item tag">HTML5</li>
-                  <li class="summary-tag-item tag">HTML5</li>
-                  <li class="summary-tag-item tag">HTML5</li>
+                  <li class="summary-tag-item tag">SCSS</li>
+                  <li class="summary-tag-item tag">JavaScript</li>
                 </ul>
                 <p class="summary-description">
-                  프로젝트 설명 프로젝트 설명 프로젝트 설명 프로젝트 설명
-                  프로젝트 설명 프로젝트 설명 프로젝트 설명 프로젝트 설명
-                  프로젝트 설명 프로젝트 설명
+                  HTML5와 SCSS를 기반으로 시맨틱 마크업을 작성하고, 다양한
+                  디바이스에 대응하는 반응형 포트폴리오 웹사이트를 제작했습니다.
                 </p>
                 <div class="summary-link-list">
-                  <a class="summary-link-item" href="/"
+                  <a class="summary-link-item" href="/" target="_blank"
                     ><i class="fa-solid fa-link"></i>Demo</a
                   >
-                  <a class="summary-link-item" href="/"
+                  <a
+                    class="summary-link-item"
+                    href="https://github.com/likeyeon/portfolio_v2"
+                    target="_blank"
                     ><i class="fa-solid fa-link"></i>Github</a
                   >
                 </div>
+                <p class="summary-period">2025.12 ~ 2026.01</p>
+                <p class="summary-people">개인 프로젝트</p>
               </div>
-              <div class="detail-info-item function">
+              <div class="project-detail-info-item function">
                 <h2 class="function-title">구현 기술</h2>
-                <ul class="function-list">
-                  <li class="function-item">
-                    <p class="description">
-                      • 이러한 기술을 구현해서 이러한 성과를 냈음
-                    </p>
-                    <div class="code">
-                      <button class="code-button">
-                        소스코드<i class="fa-solid fa-chevron-down"></i>
-                      </button>
-                      <p class="code-text">
-                        const scrollTopButton =
-                        document.querySelector('.scroll-top');
-                        scrollTopButton.addEventListener('click', function () {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                        console.log('click!'); });
-                      </p>
-                    </div>
-                  </li>
-                  <li class="function-item">
-                    <p class="description">
-                      • 이러한 기술을 구현해서 이러한 성과를 냈음
-                    </p>
-                    <div class="code">
-                      <button class="code-button">
-                        소스코드<i class="fa-solid fa-chevron-down"></i>
-                      </button>
-                      <p class="code-text">
-                        const scrollTopButton =
-                        document.querySelector('.scroll-top');
-                        scrollTopButton.addEventListener('click', function () {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                        console.log('click!'); });
-                      </p>
-                    </div>
-                  </li>
-                  <li class="function-item">
-                    <p class="description">
-                      • 이러한 기술을 구현해서 이러한 성과를 냈음
-                    </p>
-                  </li>
-                </ul>
+                <div class="function-content">
+                  <div class="function-category">
+                    <ul class="function-category-list">
+                      <li class="function-category-item">
+                        <p class="description">
+                          @keyframes를 사용하여 블로그 무한 롤링 배너
+                          애니메이션을 구현하였습니다.
+                        </p>
+                        <div class="detail">
+                          <button class="detail-button">
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <p class="detail-text">
+                            <img
+                              src="../assets/images/project01-implement-01.png"
+                              alt="관련 코드"
+                            />
+                          </p>
+                        </div>
+                      </li>
+                      <li class="function-category-item">
+                        <p class="description">
+                          메인 페이지 탭 클릭 시 해당 위치로 스크롤 이동,
+                          스크롤에 따라 탭 메뉴가 활성화되는 기능을
+                          구현하였습니다.
+                        </p>
+                        <div class="detail">
+                          <a
+                            class="detail-link"
+                            href="https://github.com/likeyeon/portfolio_v2/blob/main/js/section-tab.js"
+                            target="_blank"
+                          >
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="function-category-item">
+                        <p class="description">
+                          fetch() 함수로 JSON 파일의 데이터를 가져온 후
+                          JavaScript 객체로 변환해 가공하여 화면에 출력했습니다.
+                        </p>
+                        <div class="detail">
+                          <button class="detail-button">
+                            상세보기<i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <p class="detail-text">
+                            <img
+                              src="../assets/images/project01-implement-03.png"
+                              alt="관련 코드"
+                            />
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="detail-info-item issue">
+              <div class="project-detail-info-item issue">
                 <h2 class="issue-title">트러블 슈팅</h2>
-                <ul class="issue-list">
-                  <li class="issue-item">
+                <div class="issue-content">
+                  <div class="issue-item">
                     <span class="title"
                       ><i class="fa-solid fa-triangle-exclamation"></i> 문제
                       배경</span
                     >
                     <p class="description">
-                      문제 배경은 이러함 문제 배경은 이러함 문제 배경은 이러함
-                      문제 배경은 이러함 문제 배경은 이러함 문제 배경은 이러함
-                      문제 배경은 이러함
+                      scroll, resize 이벤트에 함수가 걸려있어 스크롤을 조금만
+                      움직이거나, 창 크기를 살짝만 조절해도 함수가 과도하게 반복
+                      실행되어 성능이 저하되는 문제가 발생했습니다.
                     </p>
-                  </li>
-                  <li class="issue-item">
+                  </div>
+                  <div class="issue-item">
                     <span class="title"
                       ><i class="fa-regular fa-lightbulb"></i> 해결 방법</span
                     >
                     <p class="description">
-                      문제 배경은 이러함 문제 배경은 이러함 문제 배경은 이러함
-                      문제 배경은 이러함 문제 배경은 이러함 문제 배경은 이러함
-                      문제 배경은 이러함
+                      lodash의 throttle을 활용하여 함수를 일정 간격으로만
+                      실행되도록 제한합니다.
                     </p>
-                  </li>
-                  <li class="issue-item">
+                    <div class="detail">
+                      <button class="detail-button">
+                        상세보기<i class="fa-solid fa-chevron-right"></i>
+                      </button>
+                      <p class="detail-text">
+                        <img
+                          src="../assets/images/project01-trouble-01.png"
+                          alt="문제 해결 코드"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                  <div class="issue-item">
                     <span class="title"
                       ><i class="fa-regular fa-thumbs-up"></i> 개선된 점</span
                     >
                     <p class="description">
-                      문제 배경은 이러함 문제 배경은 이러함 문제 배경은 이러함
-                      문제 배경은 이러함 문제 배경은 이러함 문제 배경은 이러함
-                      문제 배경은 이러함
+                      throttle 적용 후 불필요한 함수 실행을 줄여 성능과 사용자
+                      경험을 동시에 개선할 수 있었습니다.
                     </p>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-4">
-            <div class="detail-image">
-              <div class="detail-image-swiper">
-                <ul class="detail-image-list swiper-wrapper">
-                  <li class="detail-image-item swiper-slide">
+            <div class="project-detail-image">
+              <div class="project-detail-image-swiper">
+                <ul class="project-detail-image-list swiper-wrapper">
+                  <li class="project-detail-image-item swiper-slide">
                     <figure>
                       <img
-                        src="../assets/images/national-detail-01.png"
+                        src="../assets/images/project01-capture-01.png"
                         alt=""
                       />
-                      <figcaption>상세 이미지 01</figcaption>
+                      <figcaption>메인 페이지 - section1</figcaption>
                     </figure>
                   </li>
-                  <li class="detail-image-item swiper-slide">
+                  <li class="project-detail-image-item swiper-slide">
                     <figure>
                       <img
-                        src="../assets/images/national-detail-01.png"
+                        src="../assets/images/project01-capture-02.png"
                         alt=""
                       />
-                      <figcaption>상세 이미지 01</figcaption>
+                      <figcaption>메인 페이지 - section2</figcaption>
                     </figure>
                   </li>
-                  <li class="detail-image-item swiper-slide">
+                  <li class="project-detail-image-item swiper-slide">
                     <figure>
                       <img
-                        src="../assets/images/national-detail-01.png"
+                        src="../assets/images/project01-capture-03.png"
                         alt=""
                       />
-                      <figcaption>상세 이미지 01</figcaption>
+                      <figcaption>메인 페이지 - section3, section4</figcaption>
                     </figure>
                   </li>
-                  <li class="detail-image-item swiper-slide">
+                  <li class="project-detail-image-item swiper-slide">
                     <figure>
                       <img
-                        src="../assets/images/national-detail-01.png"
+                        src="../assets/images/project01-capture-04.png"
                         alt=""
                       />
-                      <figcaption>상세 이미지 01</figcaption>
+                      <figcaption>메인 페이지 - section4</figcaption>
                     </figure>
                   </li>
-                  <li class="detail-image-item swiper-slide">
+                  <li class="project-detail-image-item swiper-slide">
                     <figure>
                       <img
-                        src="../assets/images/national-detail-01.png"
+                        src="../assets/images/project01-capture-05.png"
                         alt=""
                       />
-                      <figcaption>상세 이미지 01</figcaption>
+                      <figcaption>메인 페이지 - section5</figcaption>
+                    </figure>
+                  </li>
+                  <li class="project-detail-image-item swiper-slide">
+                    <figure>
+                      <img
+                        src="../assets/images/project01-capture-06.png"
+                        alt=""
+                      />
+                      <figcaption>프로젝트 상세 페이지</figcaption>
                     </figure>
                   </li>
                 </ul>
-                <div class="detail-image-pagination swiper-pagination"></div>
+                <div
+                  class="project-detail-image-pagination swiper-pagination"
+                ></div>
               </div>
             </div>
           </div>
