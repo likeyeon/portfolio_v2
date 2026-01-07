@@ -1,17 +1,21 @@
 /* global Swiper */
 let detailSwiper = undefined;
 let viewWidth = window.innerWidth;
-const figcaptionList = document.querySelectorAll('.detail-image figcaption');
+const figcaptionList = document.querySelectorAll(
+  '.project-detail-image figcaption',
+);
 let figcaptionHidden = false;
-const detailCodeList = document.querySelectorAll('.detail .code');
+const detailCodeBtn = document.querySelectorAll(
+  '.project-detail .detail-button',
+);
 
 function initSwiper() {
   if (viewWidth <= 1024 && detailSwiper === undefined) {
-    detailSwiper = new Swiper('.detail-image-swiper', {
+    detailSwiper = new Swiper('.project-detail-image-swiper', {
       slidesPerView: 1,
       spaceBetween: 0,
       pagination: {
-        el: '.detail-image .swiper-pagination',
+        el: '.project-detail-image .swiper-pagination',
         type: 'bullets',
         clickable: true,
       },
@@ -45,8 +49,8 @@ window.addEventListener('resize', function () {
   toggleFigcaptionHidden();
 });
 
-detailCodeList.forEach((item) => {
+detailCodeBtn.forEach((item) => {
   item.addEventListener('click', function () {
-    item.classList.toggle('is-active');
+    item.parentNode.classList.toggle('is-active');
   });
 });
