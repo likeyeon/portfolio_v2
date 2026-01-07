@@ -150,12 +150,12 @@
           }
 
           &-description {
-            // word-break: keep-all;
+            word-break: keep-all;
           }
         }
 
         &::after {
-          left: 308px;
+          left: 300px;
           content: '';
           display: block;
           width: 37px;
@@ -209,6 +209,7 @@
     &-slide {
       @include flexbox.flexbox();
       flex-direction: column;
+      height: auto;
 
       &:nth-child(1) {
         background: linear-gradient(
@@ -274,8 +275,9 @@
         position: relative;
 
         .left {
+          position: relative;
           width: 100%;
-          max-width: 400px;
+          max-width: 300px;
 
           &-title {
             font-size: 24px;
@@ -285,6 +287,20 @@
             font-size: 16px;
             font-weight: 500;
             color: colors.$tertiary;
+          }
+
+          &::after {
+            right: 10%;
+            content: '';
+            display: block;
+            width: 30px;
+            height: 10px;
+            background-image: url('../../assets/images/icon/icon-project-arrow.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 9px;
+            transition: all 0.3s ease;
           }
         }
 
@@ -307,23 +323,9 @@
           }
 
           &-description {
-            // word-break: keep-all;
             font-size: 14px;
+            word-break: keep-all;
           }
-        }
-
-        &::after {
-          left: 38%;
-          content: '';
-          display: block;
-          width: 30px;
-          height: 10px;
-          background-image: url('../../assets/images/icon/icon-project-arrow.svg');
-          background-size: contain;
-          background-repeat: no-repeat;
-          position: absolute;
-          top: 9px;
-          transition: all 0.3s ease;
         }
       }
     }
@@ -416,6 +418,10 @@
             &-sub {
               display: none;
             }
+
+            &::after {
+              display: none;
+            }
           }
 
           .right {
@@ -428,21 +434,6 @@
               font-size: 11px;
               margin-right: 4px;
             }
-
-            &-description {
-              text-overflow: ellipsis;
-              overflow: hidden;
-              word-break: break-word;
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              line-clamp: 2;
-              -webkit-line-clamp: 2;
-              width: 100%;
-            }
-          }
-
-          &::after {
-            display: none;
           }
         }
 
