@@ -4,7 +4,7 @@
 @use '../mixins/flexbox';
 @use '../mixins/positions';
 
-.detail {
+.project-detail {
   &-top {
     padding-top: 86px;
     margin-bottom: 30px;
@@ -48,15 +48,6 @@
     max-width: 455px;
     padding-bottom: 80px;
 
-    &-item {
-      padding-top: 46px;
-
-      h2 {
-        font-size: 24px;
-        margin-bottom: 7px;
-      }
-    }
-
     .summary {
       padding-top: 0;
 
@@ -73,104 +64,203 @@
         margin-top: 10px;
         font-size: 16px;
         font-weight: 500;
+        word-break: keep-all;
       }
 
-      &-link-list {
-        @include flexbox.flexbox(start);
+      &-link {
+        &-list {
+          @include flexbox.flexbox(start);
+          margin-top: 5px;
+        }
+
+        &-item {
+          font-size: 16px;
+          color: colors.$secondary;
+          @include flexbox.flexbox(start);
+          font-weight: 500;
+          border-bottom: 1px solid colors.$secondary;
+          transition: 0.2s ease-in-out;
+
+          &:nth-child(1) {
+            margin-right: 23px;
+          }
+
+          i {
+            margin-right: 3px;
+          }
+
+          &:hover,
+          &:active,
+          &:focus {
+            color: colors.$mint;
+            border-color: colors.$mint;
+          }
+        }
+      }
+
+      &-period {
         margin-top: 10px;
-      }
-
-      &-link-item {
         font-size: 16px;
         color: colors.$secondary;
-        @include flexbox.flexbox(start);
-        font-weight: 500;
-        border-bottom: 1px solid colors.$secondary;
-        transition: 0.2s ease-in-out;
+      }
 
-        &:nth-child(1) {
-          margin-right: 23px;
-        }
+      &-people {
+        margin-top: 4px;
+        font-size: 16px;
+        color: colors.$secondary;
+      }
+    }
+
+    &-item {
+      padding-top: 46px;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 7px;
+      }
+
+      .title {
+        font-weight: 700;
+        @include flexbox.flexbox(start);
+        margin-bottom: 2px;
 
         i {
-          margin-right: 3px;
+          color: colors.$secondary;
+          margin-right: 6px;
+        }
+      }
+
+      .description {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .detail {
+      margin-top: 2px;
+
+      &-button,
+      &-link {
+        line-height: 1.5;
+        color: colors.$mint;
+        @include flexbox.inline-flexbox(start, center);
+
+        i {
+          line-height: 1.5;
+          transition: 0.2s ease-in-out;
+          margin-left: 6px;
+          font-size: 15px;
+        }
+      }
+
+      &-text {
+        display: none;
+        font-size: 12px;
+        font-family: typography.$font-code;
+        margin-top: 8px;
+        border-radius: 5px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          margin-bottom: 8px;
+        }
+      }
+
+      &.is-active {
+        .detail-button {
+          i {
+            transform: rotate(90deg);
+          }
         }
 
-        &:hover,
-        &:active,
-        &:focus {
-          color: colors.$mint;
-          border-color: colors.$mint;
+        .detail-text {
+          display: block;
         }
       }
     }
 
     .function {
-      .description {
-        font-size: 16px;
-        font-weight: 500;
+      &-item {
+        margin-bottom: 6px;
+
+        &:nth-last-child {
+          margin-bottom: 0;
+        }
       }
 
-      .code {
-        margin-top: 2px;
+      &-category {
+        margin-top: 20px;
 
-        &-button {
-          color: colors.$mint;
-          margin-left: 5px;
-          cursor: pointer;
+        &:nth-child(1) {
+          margin-top: 0;
+        }
 
-          i {
-            transition: 0.2s ease-in-out;
-            margin-left: 6px;
+        &-item {
+          margin-bottom: 3px;
+
+          &:nth-last-child {
+            margin-bottom: 0px;
           }
-        }
 
-        &-text {
-          display: none;
-          font-size: 12px;
-          font-family: typography.$font-code;
-          margin: 8px 0;
-          padding: 15px;
-          background: colors.$background;
-          border-radius: 5px;
-        }
+          .description {
+            margin-left: 12px;
 
-        &.is-active {
-          .code-button {
-            i {
-              transform: rotate(-180deg);
+            &::before {
+              content: '•';
+              font-size: 16px;
+              display: inline-block;
+              margin-left: -12px;
             }
           }
+        }
 
-          .code-text {
-            display: block;
-          }
+        .detail-button,
+        .detail-link {
+          margin-left: 12px;
         }
       }
     }
 
     .issue {
       &-item {
-        margin-bottom: 20px;
-        font-size: 16px;
+        margin-top: 20px;
 
-        &:last-child {
-          margin-bottom: 0;
+        &:nth-child(1) {
+          margin-top: 0;
+        }
+      }
+
+      &-category {
+        margin-top: 20px;
+
+        &:nth-child(1) {
+          margin-top: 0;
         }
 
-        .title {
-          font-weight: 700;
-          @include flexbox.flexbox(start);
-          margin-bottom: 2px;
+        &-item {
+          margin-bottom: 3px;
 
-          i {
-            color: colors.$secondary;
-            margin-right: 6px;
+          &:nth-last-child {
+            margin-bottom: 0px;
+          }
+
+          .description {
+            margin-left: 12px;
+
+            &::before {
+              content: '•';
+              font-size: 16px;
+              display: inline-block;
+              margin-left: -12px;
+            }
           }
         }
 
-        .description {
-          font-weight: 500;
+        .detail-button,
+        .detail-link {
+          margin-left: 12px;
         }
       }
     }
@@ -241,6 +331,7 @@
 
       &-list {
         flex-wrap: nowrap;
+        gap: 0;
       }
 
       &-pagination {
@@ -266,7 +357,7 @@
 
   @include responsive.responsive(M) {
     &-top {
-      padding-top: 48px;
+      padding-top: 30px;
       margin-bottom: 20px;
 
       &-back {
@@ -280,6 +371,12 @@
 
     &-image {
       margin-bottom: 12px;
+
+      &-item {
+        img {
+          margin-bottom: 0;
+        }
+      }
 
       &-pagination {
         margin-bottom: 11px;
@@ -305,6 +402,10 @@
 
         h2 {
           font-size: 20px;
+        }
+
+        .description {
+          font-size: 14px;
         }
       }
 
@@ -332,33 +433,39 @@
             }
           }
         }
+
+        &-period {
+          font-size: 14px;
+          margin-top: 8px;
+        }
+        &-people {
+          font-size: 14px;
+          margin-top: 2px;
+        }
+      }
+
+      .detail {
+        &-button,
+        &-link {
+          font-size: 14px;
+
+          i {
+            font-size: 13px;
+            margin-left: 4px;
+          }
+        }
       }
 
       .function {
-        .description {
-          font-size: 14px;
-        }
-
-        .code {
-          &-button {
-            font-size: 14px;
-            margin-left: 4px;
-
-            i {
-              margin-left: 4px;
-            }
-          }
-
-          &-text {
-            font-size: 11px;
-            padding: 10px;
-          }
+        &-item {
+          margin-bottom: 4px;
         }
       }
 
       .issue {
         &-item {
           font-size: 14px;
+          margin-top: 15px;
         }
       }
     }
