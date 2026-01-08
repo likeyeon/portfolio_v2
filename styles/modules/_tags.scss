@@ -6,12 +6,14 @@
   @include flexbox.inline-flexbox;
   background-color: colors.$mint-light;
   color: colors.$mint;
-  padding: 3px 10px;
+  padding: 5px 10px;
   font-weight: 500;
   border-radius: 15px;
+  line-height: 1.2;
+  font-size: 14px;
 
   @include responsive.responsive(M) {
-    padding: 1px 7px;
+    padding: 3px 7px;
     font-size: 12px;
   }
 }

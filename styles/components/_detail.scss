@@ -51,13 +51,9 @@
     .summary {
       padding-top: 0;
 
-      &-tag-item {
-        font-size: 14px;
-        margin-right: 3px;
-
-        &:nth-last-child {
-          margin-right: 0px;
-        }
+      &-tag-list {
+        @include flexbox.flexbox(start);
+        gap: 5px;
       }
 
       &-description {
@@ -410,11 +406,6 @@
       }
 
       .summary {
-        &-tag-item {
-          font-size: 12px;
-          margin-right: 1px;
-        }
-
         &-description {
           margin-top: 8px;
           font-size: 14px;

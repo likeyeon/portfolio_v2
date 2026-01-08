@@ -6,6 +6,7 @@
   &-tag {
     &-list {
       @include flexbox.flexbox(start);
+      gap: 20px;
       margin-bottom: 20px;
       overflow-x: auto;
       &::-webkit-scrollbar {
@@ -14,11 +15,7 @@
     }
 
     &-item {
-      margin-right: 21px;
-
-      &:nth-last-child {
-        margin-right: 0;
-      }
+      font-size: 16px;
     }
   }
 
@@ -56,17 +53,19 @@
   }
 
   @include responsive.responsive(T) {
-    &-tag {
-      &-item {
-        margin-right: 13px;
-      }
+    &-tag-list {
+      gap: 15px;
     }
   }
 
   @include responsive.responsive(M) {
     &-tag {
+      &-list {
+        gap: 5px;
+      }
+
       &-item {
-        margin-right: 5px;
+        font-size: 13px;
       }
     }
 
