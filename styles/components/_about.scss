@@ -115,8 +115,17 @@
         line-height: 1;
         font-size: 27px;
 
+        &.item-velog {
+          @include flexbox.flexbox;
+        }
+
         i {
           color: colors.$primary;
+          transition: 0.2s color;
+        }
+
+        path {
+          fill: colors.$primary;
           transition: 0.2s color;
         }
 
@@ -152,6 +161,10 @@
         &:focus {
           i {
             color: colors.$black;
+          }
+
+          path {
+            fill: colors.$black;
           }
 
           .item-comment {
@@ -260,7 +273,15 @@
 
       &-item {
         a {
-          font-size: 24px;
+          font-size: 25px;
+
+          &.item-velog svg {
+            width: 24px;
+          }
+
+          &.item-email {
+            font-size: 23px;
+          }
         }
       }
     }
