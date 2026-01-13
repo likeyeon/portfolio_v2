@@ -1,8 +1,14 @@
 @use '../constants/colors';
+@use '../constants/dimensions';
 @use '../mixins/responsive';
+@use '../mixins/flexbox';
 
 .global-footer {
-  padding: 50px 0;
+  height: dimensions.$footer-height-lg;
+  position: relative;
+  transform: translateY(-100%);
+  @include flexbox.flexbox(center);
+
   p {
     text-align: center;
     color: colors.$tertiary;
@@ -10,11 +16,11 @@
   }
 
   @include responsive.responsive(T) {
-    padding: 40px 0;
+    height: dimensions.$footer-height-md;
   }
 
   @include responsive.responsive(M) {
-    padding: 30px 0;
+    height: dimensions.$footer-height-sm;
 
     p {
       font-size: 13px;
