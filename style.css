@@ -2168,9 +2168,10 @@ textarea {
   font-weight: 500;
   border-bottom: 1px solid #8c8d96;
   transition: 0.2s ease-in-out;
-}
-.project-detail-info .summary-link-item:nth-child(1) {
   margin-right: 23px;
+}
+.project-detail-info .summary-link-item:last-child {
+  margin-right: 0;
 }
 .project-detail-info .summary-link-item i {
   margin-right: 3px;
@@ -2431,9 +2432,10 @@ textarea {
   }
   .project-detail-info .summary-link-item {
     font-size: 14px;
-  }
-  .project-detail-info .summary-link-item:nth-child(1) {
     margin-right: 15px;
+  }
+  .project-detail-info .summary-link-item:last-child {
+    margin-right: 0;
   }
   .project-detail-info .summary-period {
     font-size: 14px;
