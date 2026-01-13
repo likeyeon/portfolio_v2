@@ -5,6 +5,7 @@ const sectionTabButtonList = sectionTab.querySelectorAll(
 let currentActiveTab = sectionTab.querySelector('.is-active');
 
 const TOP_HEADER_DESKTOP = 86;
+const SCROLL_THRESHOLD = 2;
 
 let disableUpdating = false;
 
@@ -96,7 +97,7 @@ function updateActiveTabOnScroll() {
   }
 
   const bodyHeight = document.body.offsetHeight;
-  if (window.scrollY + window.innerHeight === bodyHeight) {
+  if (window.scrollY + window.innerHeight >= bodyHeight - SCROLL_THRESHOLD) {
     newActiveTab = sectionTabButtonList[5];
   }
 
