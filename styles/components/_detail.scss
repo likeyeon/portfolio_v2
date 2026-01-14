@@ -1,8 +1,30 @@
 @use '../constants/colors';
 @use '../constants/typography';
+@use '../constants/dimensions';
 @use '../mixins/responsive';
 @use '../mixins/flexbox';
 @use '../mixins/positions';
+
+html,
+body {
+  &:has(.wrap) {
+    height: 100%;
+  }
+}
+
+.wrap {
+  height: auto;
+  min-height: 100%;
+  padding-bottom: dimensions.$footer-height-lg;
+
+  @include responsive.responsive(T) {
+    padding-bottom: dimensions.$footer-height-md;
+  }
+
+  @include responsive.responsive(M) {
+    padding-bottom: dimensions.$footer-height-sm;
+  }
+}
 
 .project-detail {
   &-top {
