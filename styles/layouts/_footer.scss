@@ -3,10 +3,16 @@
 @use '../mixins/responsive';
 @use '../mixins/flexbox';
 
+body:has(.wrap) {
+  .global-footer {
+    position: relative;
+    transform: translateY(-100%);
+  }
+}
+
 .global-footer {
   height: dimensions.$footer-height-lg;
-  position: relative;
-  transform: translateY(-100%);
+
   @include flexbox.flexbox(center);
 
   p {

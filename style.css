@@ -776,10 +776,13 @@ textarea {
   }
 }
 
-.global-footer {
-  height: 124px;
+body:has(.wrap) .global-footer {
   position: relative;
   transform: translateY(-100%);
+}
+
+.global-footer {
+  height: 124px;
   display: flex;
   justify-content: center;
   align-items: center;
