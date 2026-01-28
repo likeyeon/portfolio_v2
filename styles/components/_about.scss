@@ -157,8 +157,7 @@
         }
 
         &:hover,
-        &:active,
-        &:focus {
+        &:focus-visible {
           i {
             color: colors.$black;
           }

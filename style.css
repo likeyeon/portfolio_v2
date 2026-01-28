@@ -1033,13 +1033,13 @@ body:has(.wrap) .global-footer {
   bottom: -10%;
   transform: translateX(-50%) rotate(45deg);
 }
-.about-links-item a:hover i, .about-links-item a:active i, .about-links-item a:focus i {
+.about-links-item a:hover i, .about-links-item a:focus-visible i {
   color: #000000;
 }
-.about-links-item a:hover path, .about-links-item a:active path, .about-links-item a:focus path {
+.about-links-item a:hover path, .about-links-item a:focus-visible path {
   fill: #000000;
 }
-.about-links-item a:hover .item-comment, .about-links-item a:active .item-comment, .about-links-item a:focus .item-comment {
+.about-links-item a:hover .item-comment, .about-links-item a:focus-visible .item-comment {
   display: block;
   top: -52px;
   opacity: 1;
