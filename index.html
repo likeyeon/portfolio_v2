@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -150,11 +150,10 @@
                         class="item-github"
                         href="https://github.com/likeyeon"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="깃허브 (새 탭에서 열림)"
                       >
-                        <i
-                          class="fa-brands fa-github"
-                          aria-label="깃허브 (새 탭에서 열림)"
-                        ></i>
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
                         <span class="item-comment">github</span>
                       </a>
                     </li>
@@ -176,6 +175,7 @@
                           enable-background="new 0 0 28 28"
                           xml:space="preserve"
                           width="26"
+                          aria-hidden="true"
                         >
                           <path
                             id="Website"
@@ -194,11 +194,9 @@
                         href="https://mail.google.com/mail/?view=cm&fs=1&to=deukhye98@gmail.com"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="이메일 (새 탭에서 열림)"
                       >
-                        <i
-                          class="fa-solid fa-at"
-                          aria-label="이메일 (새 탭에서 열림)"
-                        ></i>
+                        <i class="fa-solid fa-at" aria-hidden="true"></i>
                         <span class="item-comment">email</span>
                       </a>
                     </li>
@@ -207,11 +205,11 @@
                         class="item-resume"
                         href="/assets/resume.pdf"
                         download="이력서_조하연.pdf"
-                        target="_blank"
+                        aria-label="이력서 파일 다운로드"
                       >
                         <i
                           class="fa-solid fa-file-lines"
-                          aria-label="이력서 (새 탭에서 열림)"
+                          aria-hidden="true"
                         ></i>
                         <span class="item-comment">resume</span>
                       </a>
@@ -489,7 +487,11 @@
                 <div class="career-info">
                   <div class="career-info-main">
                     <h3 class="main-company">
-                      <a href="https://echomarketing.co.kr/" target="_blank"
+                      <a
+                        href="https://echomarketing.co.kr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="홈페이지로 이동 (새 탭에서 열림)"
                         >에코마케팅</a
                       >
                       <span class="position">글로벌 UX팀 - 웹 퍼블리셔</span>
@@ -719,14 +721,19 @@
                       <li class="activity-club-item">
                         <div class="title">
                           <div class="title-main">
-                            <span class="name">피로그래밍</span>
+                            <h4 class="name">피로그래밍</h4>
                             <span class="dates">2022.07 ~ 2023.02</span>
                           </div>
                           <div class="title-link">
-                            <a href="https://pirogramming.com/" target="_blank">
+                            <a
+                              href="https://pirogramming.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label="피로그래밍 홈페이지로 이동 (새 탭에서 열림)"
+                            >
                               <i
                                 class="fa-solid fa-link"
-                                aria-label="피로그래밍 홈페이지로 이동"
+                                aria-hidden="true"
                               ></i>
                             </a>
                           </div>
@@ -744,14 +751,19 @@
                       <li class="activity-club-item">
                         <div class="title">
                           <div class="title-main">
-                            <span class="name">GDSC</span>
+                            <h4 class="name">GDSC</h4>
                             <span class="dates">2022.09 ~ 2023.01</span>
                           </div>
                           <div class="title-link">
-                            <a href="https://gdgoc-cau.com/" target="_blank">
+                            <a
+                              href="https://gdgoc-cau.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label="GDSC 홈페이지로 이동 (새 탭에서 열림)"
+                            >
                               <i
                                 class="fa-solid fa-link"
-                                aria-label="GDSC 홈페이지로 이동"
+                                aria-hidden="true"
                               ></i>
                             </a>
                           </div>
@@ -782,8 +794,15 @@
                             <h4 class="name">정보처리기사</h4>
                             <span class="dates">2023.09</span>
                           </div>
-                          <button class="title-link" type="button">
-                            <i class="fa-regular fa-image" aria-hidden></i>
+                          <button
+                            class="title-link"
+                            type="button"
+                            aria-label="모달 창 열기"
+                          >
+                            <i
+                              class="fa-regular fa-image"
+                              aria-hidden="true"
+                            ></i>
                             View
                           </button>
                         </div>
@@ -794,8 +813,15 @@
                             <h4 class="name">JLPT N2</h4>
                             <span class="dates">2021.09</span>
                           </div>
-                          <button class="title-link" type="button">
-                            <i class="fa-regular fa-image" aria-hidden></i>
+                          <button
+                            class="title-link"
+                            type="button"
+                            aria-label="모달 창 열기"
+                          >
+                            <i
+                              class="fa-regular fa-image"
+                              aria-hidden="true"
+                            ></i>
                             View
                           </button>
                         </div>
@@ -853,9 +879,9 @@
 
     <aside class="certificate-modal">
       <div class="certificate-modal-header">
-        <h3>정보처리기사</h3>
-        <button class="modal-close" type="button" aria-label="모달 닫기">
-          <i class="fa-solid fa-xmark" aria-hidden></i>
+        <span class="modal-name">정보처리기사</span>
+        <button class="modal-close" type="button" aria-label="모달 창 닫기">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
       </div>
       <div class="certificate-modal-content">
@@ -865,9 +891,9 @@
 
     <aside class="certificate-modal">
       <div class="certificate-modal-header">
-        <h3>JLPT N2</h3>
-        <button class="modal-close" type="button" aria-label="모달 닫기">
-          <i class="fa-solid fa-xmark" aria-hidden></i>
+        <span class="modal-name">JLPT N2</span>
+        <button class="modal-close" type="button" aria-label="모달 창 닫기">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
       </div>
       <div class="certificate-modal-content">
