@@ -1353,6 +1353,9 @@ body:has(.wrap) .global-footer {
 .project .swiper-slide:nth-child(3) {
   background: linear-gradient(to bottom, rgb(231, 246, 255) 0%, rgb(142, 138, 215) 33%, rgb(216, 183, 236) 66%, rgb(247, 234, 255) 100%);
 }
+.project .swiper-slide:nth-child(4) {
+  background: linear-gradient(to bottom, rgb(233, 247, 255) 0%, rgb(34, 83, 255) 33%, rgb(93, 139, 244) 66%, rgb(233, 247, 255) 100%);
+}
 .project .swiper-slide .link {
   position: relative;
   display: block;

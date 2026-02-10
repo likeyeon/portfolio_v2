@@ -273,6 +273,16 @@
         );
       }
 
+      &:nth-child(4) {
+        background: linear-gradient(
+          to bottom,
+          rgba(233, 247, 255) 0%,
+          rgba(34, 83, 255) 33%,
+          rgba(93, 139, 244) 66%,
+          rgba(233, 247, 255) 100%
+        );
+      }
+
       .link {
         position: relative;
         display: block;
