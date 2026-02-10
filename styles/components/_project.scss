@@ -4,9 +4,15 @@
 @use '../mixins/responsive';
 
 .project {
+  &-content-pc-wrapper {
+    position: relative;
+    display: block;
+  }
+
   &-content-pc {
     height: 564px;
     position: relative;
+    overflow: hidden;
   }
 
   &-content-mo {
@@ -25,9 +31,24 @@
     }
 
     &-item {
-      width: 33.3%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% / 3);
       height: 100%;
       font-size: 0;
+
+      &:nth-child(2) {
+        left: calc(100% / 3);
+      }
+
+      &:nth-child(3) {
+        left: calc(100% / 3 * 2);
+      }
+
+      &:nth-child(4) {
+        left: 100%;
+      }
 
       a {
         display: block;
@@ -48,7 +69,7 @@
     }
 
     &-item {
-      width: 33.3%;
+      width: calc(100% / 3);
       height: 100%;
       position: absolute;
       top: 0;
@@ -70,7 +91,7 @@
       }
 
       &:nth-child(2) {
-        left: 33.3%;
+        left: calc(100% / 3);
         background: linear-gradient(
           to bottom,
           rgba(231, 246, 255, 1) 0%,
@@ -81,13 +102,24 @@
       }
 
       &:nth-child(3) {
-        left: 66.6%;
+        left: calc(100% / 3 * 2);
         background: linear-gradient(
           to bottom,
           rgba(231, 246, 255, 1) 0%,
           rgba(142, 138, 215, 1) 33%,
           rgba(216, 183, 236, 1) 66%,
           rgb(247, 234, 255) 100%
+        );
+      }
+
+      &:nth-child(4) {
+        left: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(233, 247, 255) 0%,
+          rgba(34, 83, 255) 33%,
+          rgba(93, 139, 244) 66%,
+          rgba(233, 247, 255) 100%
         );
       }
 
@@ -173,7 +205,7 @@
         position: absolute;
         width: 100%;
         top: 0;
-        left: 0;
+        left: 0 !important;
         z-index: 5;
 
         .img-wrapper {
@@ -353,11 +385,23 @@
     }
 
     &-button-prev {
-      left: 2.5%;
+      left: -4.5%;
     }
 
     &-button-next {
-      right: 2.5%;
+      right: -4.5%;
+    }
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1260px) {
+    .swiper {
+      &-button-prev {
+        left: -1.5%;
+      }
+
+      &-button-next {
+        right: -1.5%;
+      }
     }
   }
 
@@ -391,13 +435,35 @@
     }
   }
 
+  @media screen and (min-width: 1020px) and (max-width: 1080px) {
+    .swiper {
+      &-button-prev {
+        left: -1.5%;
+      }
+
+      &-button-next {
+        right: -1.5%;
+      }
+    }
+  }
+
   @media screen and (max-width: 1020px) {
-    &-content-pc {
+    &-content-pc-wrapper {
       display: none;
     }
 
     &-content-mo {
       display: block;
+    }
+
+    .swiper {
+      &-button-prev {
+        left: 2.5%;
+      }
+
+      &-button-next {
+        right: 2.5%;
+      }
     }
   }
 
