@@ -15,7 +15,9 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: colors.$white;
+    background-color: rgb(colors.$white, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
     &-wrapper {
       @include flexbox.flexbox(between);
